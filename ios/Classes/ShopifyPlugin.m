@@ -7,7 +7,7 @@
 //
 
 #import "ShopifyPlugin.h"
-#import "ShopifyConstants.h"
+#import "Plugin.h"
 #import "ClosePluginUseCase.h"
 #import "GetPlatformVersionUseCase.h"
 #import "shopify/shopify-Swift.h"
@@ -15,6 +15,7 @@
 @implementation ShopifyPlugin
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
+    
     ShopifyPlugin *plugin = [[ShopifyPlugin alloc]
                              initWith:@"shopify"
                              withRegistrar:registrar
@@ -29,7 +30,7 @@
     [provider registerUseCase:@"getPlatformVersion"
         with:[[GetPlatformVersionUseCase alloc] initWith:self.mPluginContext]];
     [provider registerUseCase:@"initialize"
-                         with:[[InitializeUseCase alloc] initWith:self.mPluginContext]];
+                         with:[[InitializeUseCase alloc]initWith:self.mPluginContext]];
 }
 
 @end
