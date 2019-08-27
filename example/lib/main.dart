@@ -47,14 +47,14 @@ class _MyAppState extends State<MyApp> {
     params.apiPassword = "5c3061bb2e053642fc1422409ccbb89e";
     await Shopify.initialize(params);
 
-    signIn();
+   // signIn();
 //    getProductsList(); //variantList is coming  null in this call
 //    getProduct(); //variantList is present in individual product call
 //    getProductVariants();
 //    searchProductList();
 
-    getCategories();
-    getCategoryDetails();
+//    getCategories();
+//    getCategoryDetails();
 
 //    getArticleList(); //ArticleList is itself empty
 //    getArticle();
@@ -77,7 +77,7 @@ class _MyAppState extends State<MyApp> {
 //    editCustomerAddress();
 //    deleteCustomerAddress();
 
-    editCustomerInfo();
+    //editCustomerInfo();
 
 //    updateCustomerSettings();
 
